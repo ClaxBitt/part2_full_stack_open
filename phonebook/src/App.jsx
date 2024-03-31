@@ -23,7 +23,8 @@ const App = () => {
         setPersons(initialPersons)
       })
       .catch(err => {
-        setErrorMessage("It's not possible to get the data from server")
+        setNotificationType('red')
+        setNotificationMsg("It's not possible to get the data from server")
         console.log(err)
       })
   }, [])
