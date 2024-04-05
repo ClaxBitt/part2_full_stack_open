@@ -89,8 +89,8 @@ const App = () => {
     if (confirmDelete) {
       personService
       .deletePerson(id)
-      .then(deletedPerson => {
-        setPersons(persons.filter(p => p.id !== deletedPerson.id))
+      .then(updatedPersons => {
+        setPersons(updatedPersons)
       })
       .catch(err => {
         alert('The element don\'t exist in the server or don\'t has an ID')
